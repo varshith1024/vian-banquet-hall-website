@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ViAn Banquet Hall | Where Extraordinary Celebrations Begin</title>
+  <meta name="description" content="Premium banquet hall in Champapet, Hyderabad. Elegant spaces for weddings, birthdays & celebrations. Capacity 100 guests." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: {
+              50: '#f7f7f7',
+              100: '#e3e3e3',
+              200: '#c8c8c8',
+              300: '#a4a4a4',
+              400: '#818181',
+              500: '#666666',
+              600: '#515151',
+              700: '#434343',
+              800: '#383838',
+              900: '#1a1a1a',
+              950: '#0d0d0d',
+            },
+            champagne: {
+              50: '#fbf8f1',
+              100: '#f5eedc',
+              200: '#ead9b8',
+              300: '#dcc08d',
+              400: '#cfa566',
+              500: '#c48f4a',
+              600: '#b6793f',
+              700: '#985f36',
+              800: '#7b4c32',
+              900: '#643f2b',
+            },
+            ivory: {
+              50: '#fefdfb',
+              100: '#fdf9f3',
+              200: '#faf3e6',
+              300: '#f5e8d0',
+              400: '#eed9b4',
+              500: '#e4c48f',
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Montserrat', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            'widest-xl': '0.25em',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    :root {
+      --charcoal: #1a1a1a;
+      --charcoal-deep: #0d0d0d;
+      --champagne: #c48f4a;
+      --champagne-light: #dcc08d;
+      --ivory: #fdf9f3;
+      --beige: #f5e8d0;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Montserrat', system-ui, sans-serif;
+      background-color: var(--ivory);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, .serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f5e8d0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c48f4a;
+      border-radius: 4px;
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes pulse-gold {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(196, 143, 74, 0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(196, 143, 74, 0); }
+    }
+    
+    @keyframes revealMask {
+      from {
+        clip-path: inset(0 100% 0 0);
+      }
+      to {
+        clip-path: inset(0 0 0 0);
+      }
+    }
+    
+    .animate-fade-in-up {
+      animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 1.2s ease forwards;
+    }
+    
+    .animate-scale-in {
+      animation: scaleIn 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    .animate-slide-left {
+      animation: slideInLeft 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    .animate-slide-right {
+      animation: slideInRight 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-500 { animation-delay: 0.5s; }
+    .delay-600 { animation-delay: 0.6s; }
+    .delay-700 { animation-delay: 0.7s; }
+    .delay-800 { animation-delay: 0.8s; }
+    
+    /* Reveal on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-60px);
+      transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .reveal-left.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(60px);
+      transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .reveal-right.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .reveal-scale.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    /* Hero specific */
+    .hero-image {
+      transform: scale(1.08);
+      transition: transform 8s ease-out;
+    }
+    
+    .hero-loaded .hero-image {
+      transform: scale(1);
+    }
+    
+    /* Navigation */
+    .nav-link {
+      position: relative;
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--champagne);
+      transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    /* Buttons */
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+      background: var(--champagne);
+      color: white;
+      letter-spacing: 0.15em;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 1rem 2.2rem;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.6s ease;
+    }
+    
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+    
+    .btn-primary:hover {
+      background: #b6793f;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(196, 143, 74, 0.35);
+    }
+    
+    .btn-outline {
+      position: relative;
+      letter-spacing: 0.15em;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 1rem 2.2rem;
+      border: 1px solid rgba(255,255,255,0.6);
+      color: white;
+      background: transparent;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .btn-outline:hover {
+      background: white;
+      color: var(--charcoal);
+      border-color: white;
+    }
+    
+    .btn-dark {
+      position: relative;
+      overflow: hidden;
+      background: var(--charcoal);
+      color: white;
+      letter-spacing: 0.15em;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 1.1rem 2.5rem;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .btn-dark:hover {
+      background: var(--champagne);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(196, 143, 74, 0.3);
+    }
+    
+    /* Gallery */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .gallery-item img {
+      transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+    
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13,13,13,0.5) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+    
+    /* Form inputs */
+    .form-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(26,26,26,0.2);
+      padding: 0.9rem 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      transition: border-color 0.3s ease;
+      outline: none;
+    }
+    
+    .form-input:focus {
+      border-bottom-color: var(--champagne);
+    }
+    
+    .form-input::placeholder {
+      color: rgba(26,26,26,0.4);
+    }
+    
+    .form-label {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(26,26,26,0.5);
+      margin-bottom: 0.3rem;
+      font-weight: 500;
+    }
+    
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(13,13,13,0.95);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+    
+    .lightbox.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85vh;
+      object-fit: contain;
+      transform: scale(0.9);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .lightbox.active img {
+      transform: scale(1);
+    }
+    
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: var(--charcoal-deep);
+      z-index: 90;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+    
+    .mobile-menu.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: white;
+      letter-spacing: 0.1em;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+    }
+    
+    .mobile-menu.active a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .mobile-menu.active a:nth-child(1) { transition-delay: 0.1s; }
+    .mobile-menu.active a:nth-child(2) { transition-delay: 0.15s; }
+    .mobile-menu.active a:nth-child(3) { transition-delay: 0.2s; }
+    .mobile-menu.active a:nth-child(4) { transition-delay: 0.25s; }
+    .mobile-menu.active a:nth-child(5) { transition-delay: 0.3s; }
+    .mobile-menu.active a:nth-child(6) { transition-delay: 0.35s; }
+    
+    /* Success message */
+    .success-msg {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    
+    .success-msg.active {
+      display: block;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    
+    /* Scroll indicator */
+    .scroll-indicator {
+      animation: float 2.5s ease-in-out infinite;
+    }
+    
+    /* Parallax helper */
+    .parallax {
+      will-change: transform;
+    }
+    
+    /* Facility card hover */
+    .facility-card {
+      transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .facility-card:hover {
+      transform: translateY(-8px);
+    }
+    
+    .facility-card:hover .facility-icon {
+      color: var(--champagne);
+      transform: scale(1.1);
+    }
+    
+    .facility-icon {
+      transition: all 0.4s ease;
+    }
+    
+    /* Gold line accent */
+    .gold-line {
+      width: 60px;
+      height: 1px;
+      background: var(--champagne);
+    }
+    
+    /* Selection */
+    ::selection {
+      background: var(--champagne);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== NAVIGATION ========== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center justify-between h-20 lg:h-24">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <img src="vian-logo.jpg" alt="ViAn Banquet Hall" class="h-11 w-auto object-contain brightness-110 group-hover:brightness-125 transition-all duration-300" />
+          <div class="hidden sm:block">
+            <span class="block text-[0.55rem] tracking-widest-xl uppercase text-white/50 -mt-0.5">Banquet Hall</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-10">
+          <a href="#about" class="nav-link text-white/80 hover:text-white">About</a>
+          <a href="#facilities" class="nav-link text-white/80 hover:text-white">Facilities</a>
+          <a href="#gallery" class="nav-link text-white/80 hover:text-white">Gallery</a>
+          <a href="#enquire" class="nav-link text-white/80 hover:text-white">Enquire</a>
+          <a href="#contact" class="nav-link text-white/80 hover:text-white">Contact</a>
+        </nav>
+        
+        <!-- CTA + Mobile Toggle -->
+        <div class="flex items-center gap-4">
+          <a href="#enquire" class="hidden md:inline-flex btn-primary">Enquire Now</a>
+          <button id="menuToggle" class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5" aria-label="Menu">
+            <span class="w-6 h-px bg-white transition-all duration-300" id="bar1"></span>
+            <span class="w-6 h-px bg-white transition-all duration-300" id="bar2"></span>
+            <span class="w-6 h-px bg-white transition-all duration-300" id="bar3"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <button id="menuClose" class="absolute top-7 right-7 text-white/70 hover:text-white text-3xl">&times;</button>
+    <a href="#about" class="menu-link">About</a>
+    <a href="#facilities" class="menu-link">Facilities</a>
+    <a href="#gallery" class="menu-link">Gallery</a>
+    <a href="#enquire" class="menu-link">Enquire</a>
+    <a href="#contact" class="menu-link">Contact</a>
+    <a href="#enquire" class="btn-primary mt-4">Enquire Now</a>
+  </div>
+  
+  <!-- ========== HERO ========== -->
+  <section id="hero" class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img 
+        src="vian2.webp" 
+        alt="ViAn Banquet Hall exterior at night" 
+        class="hero-image w-full h-full object-cover"
+        id="heroImg"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-charcoal-950/70 via-charcoal-950/50 to-charcoal-950/80"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-charcoal-950/40 to-transparent"></div>
+    </div>
+    
+    <!-- Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div class="opacity-0 animate-fade-in-up">
+        <span class="inline-block text-champagne-300 text-[0.65rem] tracking-widest-xl uppercase font-medium mb-6">
+          Champapet, Hyderabad
+        </span>
+      </div>
+      
+      <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-light leading-[1.05] mb-8 opacity-0 animate-fade-in-up delay-200">
+        Where Extraordinary<br>
+        <span class="italic font-normal text-champagne-200">Celebrations</span> Begin
+      </h1>
+      
+      <p class="text-white/70 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-12 opacity-0 animate-fade-in-up delay-400 font-light">
+        An intimate sanctuary of elegance in the heart of Hyderabad — designed for weddings, milestones, and moments that deserve to be unforgettable.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in-up delay-600">
+        <a href="#about" class="btn-primary">Explore Our Venue</a>
+        <a href="#enquire" class="btn-outline">Enquire Now</a>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-indicator opacity-0 animate-fade-in delay-800">
+      <a href="#about" class="flex flex-col items-center gap-2 text-white/50 hover:text-champagne-300 transition-colors">
+        <span class="text-[0.6rem] tracking-widest uppercase">Scroll</span>
+        <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M8 4v16M8 20l-4-4M8 20l4-4"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+  
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="py-24 lg:py-36 bg-ivory-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <!-- Images - Asymmetric -->
+        <div class="lg:col-span-6 relative">
+          <div class="reveal-left">
+            <div class="relative">
+              <img 
+                src="vian.webp" 
+                alt="ViAn Banquet Hall entrance with elegant balloon décor" 
+                class="w-full h-[420px] lg:h-[520px] object-cover"
+              />
+              <div class="absolute -bottom-6 -right-6 lg:-right-10 w-48 h-56 lg:w-56 lg:h-64 border border-champagne-300/40 -z-10"></div>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -left-4 lg:left-auto lg:right-8 lg:-bottom-16 w-40 h-48 lg:w-48 lg:h-56 hidden sm:block reveal-scale" style="transition-delay: 0.3s">
+            <img 
+              src="vian1.webp" 
+              alt="Interior celebration setup" 
+              class="w-full h-full object-cover shadow-2xl"
+            />
+          </div>
+        </div>
+        
+        <!-- Text -->
+        <div class="lg:col-span-6 lg:pl-8 pt-12 lg:pt-0">
+          <div class="reveal">
+            <span class="text-champagne-600 text-[0.65rem] tracking-widest-xl uppercase font-medium">Our Story</span>
+            <div class="gold-line mt-4 mb-8"></div>
+            
+            <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-charcoal-900 font-light leading-[1.1] mb-8">
+              An Intimate Setting<br>
+              for <span class="italic text-champagne-600">Life’s Finest</span> Moments
+            </h2>
+            
+            <p class="text-charcoal-600 text-[0.95rem] leading-relaxed mb-6 font-light">
+              Nestled in Champapet, Hyderabad, ViAn Banquet Hall is a thoughtfully designed space where elegance meets warmth. With a capacity of 100 guests and a refined atmosphere, every celebration here feels personal, graceful, and unforgettable.
+            </p>
+            
+            <p class="text-charcoal-500 text-[0.9rem] leading-relaxed mb-10 font-light">
+              From opulent weddings and intimate family gatherings to refined corporate events, our venue adapts beautifully — supported by air-conditioned comfort, power backup, professional lighting, and dedicated hospitality.
+            </p>
+            
+            <div class="grid grid-cols-3 gap-6 mb-10">
+              <div>
+                <span class="font-serif text-3xl text-champagne-600">100</span>
+                <span class="block text-[0.65rem] tracking-wider uppercase text-charcoal-400 mt-1">Guest Capacity</span>
+              </div>
+              <div>
+                <span class="font-serif text-3xl text-champagne-600">2</span>
+                <span class="block text-[0.65rem] tracking-wider uppercase text-charcoal-400 mt-1">AC Rooms</span>
+              </div>
+              <div>
+                <span class="font-serif text-3xl text-champagne-600">4</span>
+                <span class="block text-[0.65rem] tracking-wider uppercase text-charcoal-400 mt-1">Car Parking</span>
+              </div>
+            </div>
+            
+            <a href="#facilities" class="inline-flex items-center gap-3 text-charcoal-800 text-[0.7rem] tracking-widest uppercase font-semibold group">
+              Discover Facilities
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ========== FACILITIES ========== -->
+  <section id="facilities" class="py-24 lg:py-32 bg-charcoal-950 text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="text-center mb-16 lg:mb-20 reveal">
+        <span class="text-champagne-400 text-[0.65rem] tracking-widest-xl uppercase font-medium">Amenities</span>
+        <div class="gold-line mx-auto mt-4 mb-8"></div>
+        <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-light leading-tight">
+          Thoughtfully Crafted<br>
+          <span class="italic text-champagne-300">for Your Comfort</span>
+        </h2>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Facility 1 -->
+        <div class="facility-card group p-8 lg:p-10 border border-white/10 hover:border-champagne-500/40 bg-white/[0.02] reveal" style="transition-delay: 0.1s">
+          <div class="facility-icon mb-6 text-champagne-400">
+            <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+              <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-2xl mb-3 font-medium">Grand Banquet Hall</h3>
+          <p class="text-white/50 text-sm leading-relaxed font-light">Spacious, elegantly designed hall accommodating up to 100 seated guests with refined interiors and soft ambient lighting.</p>
+        </div>
+        
+        <!-- Facility 2 -->
+        <div class="facility-card group p-8 lg:p-10 border border-white/10 hover:border-champagne-500/40 bg-white/[0.02] reveal" style="transition-delay: 0.2s">
+          <div class="facility-icon mb-6 text-champagne-400">
+            <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+              <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-2xl mb-3 font-medium">Air Conditioned</h3>
+          <p class="text-white/50 text-sm leading-relaxed font-light">Fully air-conditioned spaces ensuring comfort throughout your celebration, even during the warmest Hyderabad evenings.</p>
+        </div>
+        
+        <!-- Facility 3 -->
+        <div class="facility-card group p-8 lg:p-10 border border-white/10 hover:border-champagne-500/40 bg-white/[0.02] reveal" style="transition-delay: 0.3s">
+          <div class="facility-icon mb-6 text-champagne-400">
+            <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+              <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-2xl mb-3 font-medium">Guest Rooms</h3>
+          <p class="text-white/50 text-sm leading-relaxed font-light">Two air-conditioned rooms available for bridal parties and close family — a private retreat before and after the celebration.</p>
+        </div>
+        
+        <!-- Facility 4 -->
+        <div class="facility-card group p-8 lg:p-10 border border-white/10 hover:border-champagne-500/40 bg-white/[0.02] reveal" style="transition-delay: 0.15s">
+          <div class="facility-icon mb-6 text-champagne-400">
+            <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+              <path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-2xl mb-3 font-medium">Ample Parking</h3>
+          <p class="text-white/50 text-sm leading-relaxed font-light">Convenient parking for 4 cars with easy access — ensuring your guests arrive and depart without hassle.</p>
+        </div>
+        
+        <!-- Facility 5 -->
+        <div class="facility-card group p-8 lg:p-10 border border-white/10 hover:border-champagne-500/40 bg-white/[0.02] reveal" style="transition-delay: 0.25s">
+          <div class="facility-icon mb-6 text-champagne-400">
+            <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-2xl mb-3 font-medium">Power Backup</h3>
+          <p class="text-white/50 text-sm leading-relaxed font-light">Reliable electricity backup so your celebration continues uninterrupted, no matter the circumstances.</p>
+        </div>
+        
+        <!-- Facility 6 -->
+        <div class="facility-card group p-8 lg:p-10 border border-white/10 hover:border-champagne-500/40 bg-white/[0.02] reveal" style="transition-delay: 0.35s">
+          <div class="facility-icon mb-6 text-champagne-400">
+            <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+              <path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-2xl mb-3 font-medium">Stage & Sound</h3>
+          <p class="text-white/50 text-sm leading-relaxed font-light">Professional stage arrangements, lighting and sound systems ready for ceremonies, performances and announcements.</p>
+        </div>
+      </div>
+      
+      <!-- Extra info strip -->
+      <div class="mt-16 lg:mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+        <div class="text-center p-6 border border-white/5">
+          <span class="block font-serif text-champagne-300 text-lg mb-1">Outside Decorators</span>
+          <span class="text-white/40 text-xs tracking-wider uppercase">Allowed</span>
+        </div>
+        <div class="text-center p-6 border border-white/5">
+          <span class="block font-serif text-champagne-300 text-lg mb-1">Outside Food</span>
+          <span class="text-white/40 text-xs tracking-wider uppercase">Allowed</span>
+        </div>
+        <div class="text-center p-6 border border-white/5">
+          <span class="block font-serif text-champagne-300 text-lg mb-1">Outside DJ</span>
+          <span class="text-white/40 text-xs tracking-wider uppercase">Not Allowed</span>
+        </div>
+        <div class="text-center p-6 border border-white/5">
+          <span class="block font-serif text-champagne-300 text-lg mb-1">Alcohol</span>
+          <span class="text-white/40 text-xs tracking-wider uppercase">Not Allowed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ========== GALLERY ========== -->
+  <section id="gallery" class="py-24 lg:py-32 bg-ivory-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-14 lg:mb-16 gap-6">
+        <div class="reveal">
+          <span class="text-champagne-600 text-[0.65rem] tracking-widest-xl uppercase font-medium">Visual Journey</span>
+          <div class="gold-line mt-4 mb-6"></div>
+          <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-charcoal-900 font-light leading-tight">
+            Moments of<br>
+            <span class="italic text-champagne-600">Pure Elegance</span>
+          </h2>
+        </div>
+        <p class="text-charcoal-500 text-sm max-w-sm font-light leading-relaxed reveal lg:text-right" style="transition-delay: 0.2s">
+          From grand entrances to intimate celebrations — experience the atmosphere that makes every event at ViAn unforgettable.
+        </p>
+      </div>
+      
+      <!-- Asymmetric Gallery Grid -->
+      <div class="grid grid-cols-12 gap-4 lg:gap-5">
+        <!-- Large left -->
+        <div class="col-span-12 lg:col-span-7 gallery-item reveal-scale" onclick="openLightbox('vian2.webp', 'Night exterior of ViAn Banquet Hall')">
+          <img src="vian2.webp" alt="ViAn Banquet Hall night view" class="w-full h-[320px] sm:h-[400px] lg:h-[480px] object-cover" />
+          <div class="absolute bottom-5 left-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+            <span class="text-white text-xs tracking-wider uppercase">Exterior · Night</span>
+          </div>
+        </div>
+        
+        <!-- Right stacked -->
+        <div class="col-span-12 lg:col-span-5 grid grid-rows-2 gap-4 lg:gap-5">
+          <div class="gallery-item reveal-scale" style="transition-delay: 0.15s" onclick="openLightbox('vian.webp', 'Decorated entrance with balloon arch')">
+            <img src="vian.webp" alt="Balloon arch entrance" class="w-full h-[200px] lg:h-full object-cover" />
+          </div>
+          <div class="gallery-item reveal-scale" style="transition-delay: 0.25s" onclick="openLightbox('vian1.webp', 'Birthday celebration setup')">
+            <img src="vian1.webp" alt="Interior celebration" class="w-full h-[200px] lg:h-full object-cover" />
+          </div>
+        </div>
+        
+        <!-- Bottom row -->
+        <div class="col-span-6 lg:col-span-4 gallery-item reveal-scale" style="transition-delay: 0.1s" onclick="openLightbox('vian1.webp', 'Stage and décor')">
+          <img src="vian1.webp" alt="Stage setup" class="w-full h-[220px] lg:h-[280px] object-cover" />
+        </div>
+        <div class="col-span-6 lg:col-span-4 gallery-item reveal-scale" style="transition-delay: 0.2s" onclick="openLightbox('vian.webp', 'Entrance details')">
+          <img src="vian.webp" alt="Entrance décor" class="w-full h-[220px] lg:h-[280px] object-cover" />
+        </div>
+        <div class="col-span-12 lg:col-span-4 gallery-item reveal-scale" style="transition-delay: 0.3s" onclick="openLightbox('vian2.webp', 'Illuminated façade')">
+          <img src="vian2.webp" alt="Illuminated hall" class="w-full h-[220px] lg:h-[280px] object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ========== ENQUIRY ========== -->
+  <section id="enquire" class="py-24 lg:py-32 bg-charcoal-900 text-white relative overflow-hidden">
+    <!-- Subtle pattern -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+    
+    <div class="max-w-4xl mx-auto px-6 lg:px-10 relative z-10">
+      <div class="text-center mb-14 reveal">
+        <span class="text-champagne-400 text-[0.65rem] tracking-widest-xl uppercase font-medium">Begin Your Story</span>
+        <div class="gold-line mx-auto mt-4 mb-8"></div>
+        <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-5">
+          Enquire About<br>
+          <span class="italic text-champagne-300">Your Celebration</span>
+        </h2>
+        <p class="text-white/50 text-sm max-w-md mx-auto font-light">
+          Share a few details and our team will reach out to discuss availability, packages and how we can make your day exceptional.
+        </p>
+      </div>
+      
+      <!-- Form -->
+      <div id="formContainer" class="reveal" style="transition-delay: 0.2s">
+        <form id="enquiryForm" class="space-y-8" novalidate>
+          <div class="grid sm:grid-cols-2 gap-8">
+            <div>
+              <label class="form-label text-white/40">Full Name *</label>
+              <input type="text" name="name" required class="form-input text-white border-white/20 focus:border-champagne-400 placeholder:text-white/30" placeholder="Your full name" />
+              <span class="error-msg text-red-400 text-xs mt-1 hidden">Please enter your name</span>
+            </div>
+            <div>
+              <label class="form-label text-white/40">Phone Number *</label>
+              <input type="tel" name="phone" required class="form-input text-white border-white/20 focus:border-champagne-400 placeholder:text-white/30" placeholder="+91 98765 43210" />
+              <span class="error-msg text-red-400 text-xs mt-1 hidden">Please enter a valid phone number</span>
+            </div>
+          </div>
+          
+          <div class="grid sm:grid-cols-2 gap-8">
+            <div>
+              <label class="form-label text-white/40">Email Address *</label>
+              <input type="email" name="email" required class="form-input text-white border-white/20 focus:border-champagne-400 placeholder:text-white/30" placeholder="you@example.com" />
+              <span class="error-msg text-red-400 text-xs mt-1 hidden">Please enter a valid email</span>
+            </div>
+            <div>
+              <label class="form-label text-white/40">Event Type *</label>
+              <select name="eventType" required class="form-input text-white border-white/20 focus:border-champagne-400 appearance-none bg-transparent">
+                <option value="" class="bg-charcoal-900">Select event type</option>
+                <option value="wedding" class="bg-charcoal-900">Wedding</option>
+                <option value="reception" class="bg-charcoal-900">Reception</option>
+                <option value="birthday" class="bg-charcoal-900">Birthday</option>
+                <option value="engagement" class="bg-charcoal-900">Engagement</option>
+                <option value="corporate" class="bg-charcoal-900">Corporate Event</option>
+                <option value="other" class="bg-charcoal-900">Other Celebration</option>
+              </select>
+              <span class="error-msg text-red-400 text-xs mt-1 hidden">Please select an event type</span>
+            </div>
+          </div>
+          
+          <div class="grid sm:grid-cols-2 gap-8">
+            <div>
+              <label class="form-label text-white/40">Preferred Event Date</label>
+              <input type="date" name="date" class="form-input text-white border-white/20 focus:border-champagne-400" />
+            </div>
+            <div>
+              <label class="form-label text-white/40">Expected Guests</label>
+              <input type="number" name="guests" min="1" max="150" class="form-input text-white border-white/20 focus:border-champagne-400 placeholder:text-white/30" placeholder="e.g. 80" />
+            </div>
+          </div>
+          
+          <div>
+            <label class="form-label text-white/40">Additional Message</label>
+            <textarea name="message" rows="3" class="form-input text-white border-white/20 focus:border-champagne-400 placeholder:text-white/30 resize-none" placeholder="Tell us more about your vision..."></textarea>
+          </div>
+          
+          <div class="pt-4 text-center">
+            <button type="submit" id="submitBtn" class="btn-primary min-w-[220px] inline-flex items-center justify-center gap-3">
+              <span id="btnText">Send Enquiry</span>
+              <svg id="btnLoader" class="hidden w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Success Message -->
+      <div id="successMsg" class="success-msg">
+        <div class="w-16 h-16 mx-auto mb-6 rounded-full border border-champagne-400/50 flex items-center justify-center">
+          <svg class="w-8 h-8 text-champagne-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <h3 class="font-serif text-3xl mb-3 text-champagne-200">Thank You</h3>
+        <p class="text-white/60 text-sm max-w-sm mx-auto font-light leading-relaxed mb-8">
+          Your enquiry has been received. Our team will contact you shortly to discuss your celebration in detail.
+        </p>
+        <button onclick="resetForm()" class="btn-outline text-sm">Send Another Enquiry</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ========== CONTACT & FOOTER ========== -->
+  <footer id="contact" class="bg-charcoal-950 text-white pt-20 lg:pt-28 pb-10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 mb-16 lg:mb-20">
+        <!-- Brand -->
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3 mb-6">
+            <img src="vian-logo.jpg" alt="ViAn Banquet Hall" class="h-14 w-auto object-contain" />
+            <div>
+              <span class="block text-[0.55rem] tracking-widest-xl uppercase text-white/40 -mt-0.5">Banquet Hall</span>
+            </div>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed font-light max-w-xs mb-8">
+            Where every celebration is crafted with care, elegance and unforgettable hospitality in the heart of Hyderabad.
+          </p>
+          <a href="#enquire" class="btn-primary text-xs">Enquire Now</a>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="lg:col-span-4 lg:pl-8">
+          <h4 class="text-[0.65rem] tracking-widest-xl uppercase text-champagne-400 mb-6 font-medium">Visit Us</h4>
+          <address class="not-italic text-white/60 text-sm leading-relaxed font-light mb-6">
+            Ground Floor, BVB Building<br>
+            Opp. Manda Ram Reddy Convention<br>
+            Nagarjuna Colony, Brundavan Nagar Colony<br>
+            Champapet, Hyderabad – 500079<br>
+            Telangana
+          </address>
+          <div class="space-y-3">
+            <a href="tel:+919618056059" class="flex items-center gap-3 text-white/70 hover:text-champagne-300 transition-colors text-sm">
+              <svg class="w-4 h-4 text-champagne-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              +91 96180 56059
+            </a>
+            <a href="tel:+918143131671" class="flex items-center gap-3 text-white/70 hover:text-champagne-300 transition-colors text-sm">
+              <svg class="w-4 h-4 text-champagne-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              +91 81431 31671
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Vian+Banquet+Hall+Ground+floor+BVB+building+Champapet+Hyderabad" target="_blank" rel="noopener" class="flex items-center gap-3 text-white/70 hover:text-champagne-300 transition-colors text-sm">
+              <svg class="w-4 h-4 text-champagne-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="lg:col-span-2">
+          <h4 class="text-[0.65rem] tracking-widest-xl uppercase text-champagne-400 mb-6 font-medium">Explore</h4>
+          <nav class="flex flex-col gap-3">
+            <a href="#about" class="text-white/50 hover:text-white text-sm transition-colors">About</a>
+            <a href="#facilities" class="text-white/50 hover:text-white text-sm transition-colors">Facilities</a>
+            <a href="#gallery" class="text-white/50 hover:text-white text-sm transition-colors">Gallery</a>
+            <a href="#enquire" class="text-white/50 hover:text-white text-sm transition-colors">Enquire</a>
+          </nav>
+        </div>
+        
+        <!-- Policies -->
+        <div class="lg:col-span-2">
+          <h4 class="text-[0.65rem] tracking-widest-xl uppercase text-champagne-400 mb-6 font-medium">Policies</h4>
+          <ul class="space-y-2 text-white/40 text-xs leading-relaxed">
+            <li>50% on booking</li>
+            <li>50% on event date</li>
+            <li>Cancellation: situational</li>
+            <li>Outside décor allowed</li>
+            <li>Outside food allowed</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Bottom bar -->
+      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-white/30 text-xs tracking-wider">
+          © 2025 ViAn Banquet Hall. All rights reserved.
+        </p>
+        <p class="text-white/30 text-xs tracking-wider">
+          Crafted with elegance in Hyderabad
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="absolute top-6 right-6 text-white/70 hover:text-white text-4xl z-10" aria-label="Close">&times;</button>
+    <button id="prevBtn" class="absolute left-4 lg:left-8 text-white/60 hover:text-white text-3xl z-10 p-2" onclick="event.stopPropagation(); navigateLightbox(-1)">&#8249;</button>
+    <button id="nextBtn" class="absolute right-4 lg:right-8 text-white/60 hover:text-white text-3xl z-10 p-2" onclick="event.stopPropagation(); navigateLightbox(1)">&#8250;</button>
+    <img id="lightboxImg" src="" alt="" onclick="event.stopPropagation()" />
+  </div>
+  
+  <script>
+    // ===== Hero load animation =====
+    window.addEventListener('load', () => {
+      document.getElementById('hero').classList.add('hero-loaded');
+    });
+    
+    // ===== Navbar scroll effect =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add('bg-charcoal-950/95', 'backdrop-blur-md', 'shadow-lg');
+        navbar.classList.remove('bg-transparent');
+      } else {
+        navbar.classList.remove('bg-charcoal-950/95', 'backdrop-blur-md', 'shadow-lg');
+      }
+    });
+    
+    // ===== Mobile Menu =====
+    const menuToggle = document.getElementById('menuToggle');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+    
+    function openMenu() {
+      mobileMenu.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMenu() {
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    
+    menuToggle.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+    
+    document.querySelectorAll('.menu-link, #mobileMenu .btn-primary').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+    
+    // ===== Scroll Reveal =====
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+    
+    revealElements.forEach(el => revealObserver.observe(el));
+    
+    // ===== Lightbox =====
+    const galleryImages = [
+      { src: 'vian2.webp', alt: 'Night exterior of ViAn Banquet Hall' },
+      { src: 'vian.webp', alt: 'Decorated entrance with balloon arch' },
+      { src: 'vian1.webp', alt: 'Birthday celebration setup' },
+      { src: 'vian1.webp', alt: 'Stage and décor' },
+      { src: 'vian.webp', alt: 'Entrance details' },
+      { src: 'vian2.webp', alt: 'Illuminated façade' }
+    ];
+    
+    let currentIndex = 0;
+    
+    function openLightbox(src, alt) {
+      currentIndex = galleryImages.findIndex(img => img.src === src);
+      if (currentIndex === -1) currentIndex = 0;
+      
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImg');
+      img.src = galleryImages[currentIndex].src;
+      img.alt = galleryImages[currentIndex].alt || alt;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    
+    function navigateLightbox(dir) {
+      currentIndex = (currentIndex + dir + galleryImages.length) % galleryImages.length;
+      const img = document.getElementById('lightboxImg');
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = galleryImages[currentIndex].src;
+        img.alt = galleryImages[currentIndex].alt;
+        img.style.opacity = '1';
+      }, 200);
+    }
+    
+    document.addEventListener('keydown', (e) => {
+      if (!document.getElementById('lightbox').classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigateLightbox(-1);
+      if (e.key === 'ArrowRight') navigateLightbox(1);
+    });
+    
+    // ===== Form Handling =====
+    const form = document.getElementById('enquiryForm');
+    const formContainer = document.getElementById('formContainer');
+    const successMsg = document.getElementById('successMsg');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnLoader = document.getElementById('btnLoader');
+    
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Reset errors
+      form.querySelectorAll('.error-msg').forEach(el => el.classList.add('hidden'));
+      let valid = true;
+      
+      const name = form.name.value.trim();
+      const phone = form.phone.value.trim();
+      const email = form.email.value.trim();
+      const eventType = form.eventType.value;
+      
+      if (!name) {
+        form.name.nextElementSibling.classList.remove('hidden');
+        valid = false;
+      }
+      
+      if (!phone || phone.length < 10) {
+        form.phone.nextElementSibling.classList.remove('hidden');
+        valid = false;
+      }
+      
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        form.email.nextElementSibling.classList.remove('hidden');
+        valid = false;
+      }
+      
+      if (!eventType) {
+        form.eventType.nextElementSibling.classList.remove('hidden');
+        valid = false;
+      }
+      
+      if (!valid) return;
+      
+      // Simulate loading
+      submitBtn.disabled = true;
+      btnText.classList.add('hidden');
+      btnLoader.classList.remove('hidden');
+      
+      setTimeout(() => {
+        formContainer.style.display = 'none';
+        successMsg.classList.add('active');
+        submitBtn.disabled = false;
+        btnText.classList.remove('hidden');
+        btnLoader.classList.add('hidden');
+      }, 1600);
+    });
+    
+    function resetForm() {
+      form.reset();
+      formContainer.style.display = 'block';
+      successMsg.classList.remove('active');
+    }
+    
+    // ===== Smooth parallax on hero (subtle) =====
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const heroImg = document.getElementById('heroImg');
+      if (heroImg && scrolled < window.innerHeight) {
+        heroImg.style.transform = `scale(${1 + scrolled * 0.00015}) translateY(${scrolled * 0.15}px)`;
+      }
+    });
+  </script>
+</body>
+</html>
