@@ -250,16 +250,6 @@
       transform: scale(1);
     }
     
-    /* Hero specific */
-    .hero-image {
-      transform: scale(1.08);
-      transition: transform 8s ease-out;
-    }
-    
-    .hero-loaded .hero-image {
-      transform: scale(1);
-    }
-    
     /* Navigation */
     .nav-link {
       position: relative;
@@ -509,11 +499,6 @@
       animation: float 2.5s ease-in-out infinite;
     }
     
-    /* Parallax helper */
-    .parallax {
-      will-change: transform;
-    }
-    
     /* Facility card hover */
     .facility-card {
       transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -594,36 +579,55 @@
   
   <!-- ========== HERO ========== -->
   <section id="hero" class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-    <!-- Background Image -->
+    <!-- Rich Elegant Background -->
     <div class="absolute inset-0">
-      <img 
-        src="vian2.webp" 
-        alt="ViAn Banquet Hall exterior at night" 
-        class="hero-image w-full h-full object-cover"
-        id="heroImg"
-      />
-      <div class="absolute inset-0 bg-gradient-to-b from-charcoal-950/70 via-charcoal-950/50 to-charcoal-950/80"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-charcoal-950/40 to-transparent"></div>
+      <!-- Deep warm black base -->
+      <div class="absolute inset-0 bg-[#0c0a09]"></div>
+      
+      <!-- Warm champagne radial glow -->
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 85% 65% at 50% 38%, rgba(196, 143, 74, 0.16) 0%, transparent 68%);"></div>
+      
+      <!-- Soft top ambient light -->
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 120% 55% at 50% -5%, rgba(220, 192, 141, 0.09) 0%, transparent 50%);"></div>
+      
+      <!-- Bottom vignette -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0c0a09] via-transparent to-transparent"></div>
+      
+      <!-- Side depth -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0c0a09]/70 via-transparent to-[#0c0a09]/70"></div>
+      
+      <!-- Fine grain texture -->
+      <div class="absolute inset-0 opacity-[0.035]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+      
+      <!-- Thin vertical gold accent line -->
+      <div class="absolute top-[15%] left-1/2 -translate-x-1/2 w-px h-14 bg-gradient-to-b from-transparent via-champagne-400/45 to-transparent"></div>
     </div>
     
     <!-- Content -->
     <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
       <div class="opacity-0 animate-fade-in-up">
-        <span class="inline-block text-champagne-300 text-[0.65rem] tracking-widest-xl uppercase font-medium mb-6">
-          Champapet, Hyderabad
+        <span class="inline-block text-champagne-300/90 text-[0.7rem] tracking-[0.35em] uppercase font-medium mb-8">
+          Champapet  Hyderabad
         </span>
       </div>
       
-      <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-light leading-[1.05] mb-8 opacity-0 animate-fade-in-up delay-200">
+      <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.4rem] text-white font-light leading-[1.08] mb-7 opacity-0 animate-fade-in-up delay-200">
         Where Extraordinary<br>
         <span class="italic font-normal text-champagne-200">Celebrations</span> Begin
       </h1>
       
-      <p class="text-white/70 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-12 opacity-0 animate-fade-in-up delay-400 font-light">
+      <!-- Decorative divider -->
+      <div class="flex items-center justify-center gap-4 mb-8 opacity-0 animate-fade-in-up delay-300">
+        <div class="w-14 h-px bg-gradient-to-r from-transparent to-champagne-400/50"></div>
+        <div class="w-1.5 h-1.5 rotate-45 border border-champagne-400/55"></div>
+        <div class="w-14 h-px bg-gradient-to-l from-transparent to-champagne-400/50"></div>
+      </div>
+      
+      <p class="text-white/55 text-sm sm:text-[0.95rem] max-w-md mx-auto leading-relaxed mb-12 opacity-0 animate-fade-in-up delay-400 font-light tracking-wide">
         An intimate sanctuary of elegance in the heart of Hyderabad — designed for weddings, milestones, and moments that deserve to be unforgettable.
       </p>
       
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in-up delay-600">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-5 opacity-0 animate-fade-in-up delay-600">
         <a href="#about" class="btn-primary">Explore Our Venue</a>
         <a href="#enquire" class="btn-outline">Enquire Now</a>
       </div>
@@ -631,11 +635,9 @@
     
     <!-- Scroll Indicator -->
     <div class="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-indicator opacity-0 animate-fade-in delay-800">
-      <a href="#about" class="flex flex-col items-center gap-2 text-white/50 hover:text-champagne-300 transition-colors">
-        <span class="text-[0.6rem] tracking-widest uppercase">Scroll</span>
-        <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M8 4v16M8 20l-4-4M8 20l4-4"/>
-        </svg>
+      <a href="#about" class="flex flex-col items-center gap-3 text-white/35 hover:text-champagne-300 transition-colors">
+        <span class="text-[0.6rem] tracking-[0.3em] uppercase">Scroll</span>
+        <div class="w-px h-11 bg-gradient-to-b from-champagne-400/40 to-transparent"></div>
       </a>
     </div>
   </section>
@@ -1059,11 +1061,6 @@
   </div>
   
   <script>
-    // ===== Hero load animation =====
-    window.addEventListener('load', () => {
-      document.getElementById('hero').classList.add('hero-loaded');
-    });
-    
     // ===== Navbar scroll effect =====
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
@@ -1079,9 +1076,6 @@
     const menuToggle = document.getElementById('menuToggle');
     const menuClose = document.getElementById('menuClose');
     const mobileMenu = document.getElementById('mobileMenu');
-    const bar1 = document.getElementById('bar1');
-    const bar2 = document.getElementById('bar2');
-    const bar3 = document.getElementById('bar3');
     
     function openMenu() {
       mobileMenu.classList.add('active');
@@ -1224,15 +1218,6 @@
       formContainer.style.display = 'block';
       successMsg.classList.remove('active');
     }
-    
-    // ===== Smooth parallax on hero (subtle) =====
-    window.addEventListener('scroll', () => {
-      const scrolled = window.scrollY;
-      const heroImg = document.getElementById('heroImg');
-      if (heroImg && scrolled < window.innerHeight) {
-        heroImg.style.transform = `scale(${1 + scrolled * 0.00015}) translateY(${scrolled * 0.15}px)`;
-      }
-    });
   </script>
 </body>
 </html>
